@@ -1,0 +1,138 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-base: #5285b8;
+    --color-dark: #2c3e50;
+    --color-light: #ecf0f1;
+    --color-warning: #00177c;
+    --color-repuesto: #5d6d7e;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'FuentePersonal', sans-serif;
+    background-color: var(--color-light);
+    color: var(--color-base);
+}
+
+/* ================================
+    HEADER
+================================ */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-base);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    border-bottom: 4px solid var(--color-dark);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.logo {
+    height: 150px;
+    padding-right: 40px;
+}
+
+h1{
+    font-size: 50px
+}
+.header-logo{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    align-items: center;
+}
+
+.header-central {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.nombre-cliente {
+    color: var(--color-light);
+    font-size: 40px;
+    font-family: 'FuentePersonal', sans-serif;
+    font-weight: bold;
+}
+
+.nav-cliente {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-cliente a {
+    color: var(--color-light);
+    text-decoration: none;
+    font-size: 22px;
+    position: relative;
+    transition: color 0.3s ease;
+    font-family: 'FuentePersonal', sans-serif;
+}
+
+.nav-cliente a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--color-light);
+    transition: width 0.3s ease;
+}
+
+.nav-cliente a:hover {
+    color: var(--color-secundario);
+}
+
+.nav-cliente a:hover::after {
+    width: 100%;
+}
+
+.header-admin {
+    display: flex;
+    align-items: center;
+}
+
+.boton-admin {
+    background-color: var(--color-light);
+    color: var(--color-base);
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 300ms ease;
+}
+
+.boton-admin:hover {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
+
+
+@font-face {
+    font-family: 'FuentePersonal';
+    src: url("../fonts/NotoSans_ExtraCondensed-SemiBoldItalic.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+

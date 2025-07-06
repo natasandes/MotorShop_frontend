@@ -1,0 +1,48 @@
+body{
+    background-color: #162c8f;
+}
+
+.pantalla-bienvenida{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 70px;
+}
+
+img{
+    width: 400px;
+}
+
+h1{
+    font-size: 90px;
+    color: #000d44;
+}
+
+h3{
+    font-size: 30px;;
+}
+
+#nombre_usuario{
+    width: 300px;
+    height: 40px;
+    border-radius: 7px;
+    border: solid #000d44 3px;
+    background-color: #3c5b72;
+    font-size: 25px;
+    font-family: 'FuentePersonal', sans-serif;
+    padding: 5px;
+}
+
+#boton_enviar{
+    width: 200px;
+    height: 35px;
+    background-color: #000d44;
+    color: aliceblue;
+    font-size: 20px;
+    font-family: 'FuentePersonal', sans-serif;
+    padding: 3px;
+    cursor: pointer;
+}
