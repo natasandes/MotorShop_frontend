@@ -1,7 +1,205 @@
-/* Layout General */
-.zona-principal {
-    display: flex;
-    flex-direction: row;
+:root {
+    --color-base: #5285b8;
+    --color-dark: #2c3e50;
+    --color-light: #ecf0f1;
+    --color-warning: #00177c;
+    --color-repuesto: #5d6d7e;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--color-light);
+    color: var(--color-dark);
+}
+
+.contenedor-carrito {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: var(--color-base);
+}
+
+#tabla-carrito {
     width: 100%;
-    min-height: 100vh;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#tabla-carrito thead {
+    background-color: var(--color-base);
+    color: white;
+}
+
+#tabla-carrito th,
+#tabla-carrito td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+#tabla-carrito img {
+    width: 60px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.total-carrito {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: right;
+}
+
+.botones{
+    display: flex;
+}
+.btn-limpiar-carrito ,.btn-finalizar-compra{
+    display: block;
+    margin: 20px auto;
+    background-color: var(--color-warning);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-limpiar-carrito:hover {
+    background-color: #000d4f;
+}
+.btn-finalizar-compra:hover {
+    background-color: #000d4f;
+}
+
+/* =======================
+    RESPONSIVE - TABLET Y MÓVIL
+   ======================= */
+
+/* Estilos generales responsivos */
+@media (max-width: 768px) {
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .header-logo h1 {
+        font-size: 1.5rem;
+    }
+
+    .header-central {
+        flex-direction: column;
+    }
+
+    .nav-cliente a {
+        display: inline-block;
+        margin: 5px 10px;
+    }
+
+    .boton-admin {
+        margin-top: 10px;
+    }
+
+    .contenedor-carrito {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+
+    #tabla-carrito thead {
+        display: none; /* Oculta encabezado */
+    }
+
+    #tabla-carrito, 
+    #tabla-carrito tbody, 
+    #tabla-carrito tr, 
+    #tabla-carrito td {
+        display: block;
+        width: 100%;
+    }
+
+    #tabla-carrito tr {
+        margin-bottom: 15px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        padding: 10px;
+    }
+
+    #tabla-carrito td {
+        text-align: left;
+        padding: 8px;
+        font-size: 0.95rem;
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+    }
+
+    #tabla-carrito td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+        color: var(--color-base);
+    }
+
+    #tabla-carrito img {
+        width: 100%;
+        max-width: 120px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .total-carrito {
+        font-size: 1rem;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .botones {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin-top: 20px;
+    }
+
+    .btn-limpiar-carrito,
+    .btn-finalizar-compra {
+        width: 90%;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-logo img {
+        width: 50px;
+    }
+
+    .header-logo h1 {
+        font-size: 1.2rem;
+    }
+
+    .btn-limpiar-carrito,
+    .btn-finalizar-compra {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .total-carrito {
+        font-size: 0.9rem;
+    }
 }

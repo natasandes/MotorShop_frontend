@@ -136,3 +136,135 @@ h1{
     font-style: normal;
 }
 
+/* 1. Pantallas extra grandes (>=1200px) */
+@media (min-width: 1200px) {
+    .header {
+        flex-direction: row;
+        padding: 20px 40px;
+    }
+
+    .logo {
+        height: 180px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .nombre-cliente {
+        font-size: 2.5rem;
+    }
+
+    .nav-cliente {
+        gap: 40px;
+    }
+
+    .nav-cliente a {
+        font-size: 1.5rem;
+    }
+
+    .boton-admin {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
+/* 2. Pantallas medianas (768px–1199px)  usamos and como en js*/
+@media (min-width: 768px) and (max-width: 1199px) {
+    .header {
+        flex-wrap: wrap;
+        padding: 15px 30px;
+    }
+
+    .logo {
+        height: 140px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .nombre-cliente {
+        font-size: 2rem;
+    }
+
+    .nav-cliente {
+        gap: 30px;
+    }
+
+    .nav-cliente a {
+        font-size: 1.3rem;
+    }
+
+    .boton-admin {
+        padding: 8px 18px;
+        font-size: 0.9rem;
+    }
+}
+
+/* 3. Pantallas pequeñas (576px–767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 20px;
+    }
+
+    .logo {
+        height: 120px;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .nombre-cliente {
+        font-size: 1.8rem;
+    }
+
+    .nav-cliente {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-cliente a {
+        font-size: 1.2rem;
+    }
+
+    .boton-admin {
+        margin-top: 10px;
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+}
+
+/* 4. Pantallas extra pequeñas (<576px) */
+@media (max-width: 575px) {
+    .header {
+        flex-direction: column;
+        padding: 8px 10px;
+    }
+
+    .logo {
+        height: 100px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .nombre-cliente {
+        font-size: 1.5rem;
+    }
+
+    .nav-cliente {
+        display: none; /* Podés reemplazarlo por un menú hamburguesa */
+    }
+
+    .boton-admin {
+        width: 100%;
+        padding: 6px 0;
+        font-size: 0.8rem;
+    }
+}

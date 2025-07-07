@@ -6,6 +6,19 @@ function validarNombre(){
     });
 
 }
-  
+
 
 validarNombre();
+
+document.getElementById("boton_enviar").addEventListener("click", () => {
+    const nombre = document.getElementById("nombre_usuario").value.trim();
+
+    if (!nombre) {
+        alert("Por favor, ingresá tu nombre antes de continuar.");
+        return;
+    }
+
+    // Guardar en localStorage 
+    localStorage.setItem("nombre_usuario", nombre);
+    window.location.href = "productos.html";
+});

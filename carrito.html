@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="css/globales.css">
     <link rel="stylesheet" href="css/carrito.css">
     <!-- Script -->
-    <script defer src="js/productos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script defer src="js/carrito.js"></script>
 
 
 
@@ -39,8 +40,32 @@
 
         <!-- Botón admin a la derecha -->
         <div class="header-admin">
-            <button class="boton-admin">Admin</button>
+            <button class="boton-admin" id="boton-admin">Admin</button>
         </div>
     </header>
+    <main class="contenedor-carrito">
+        <h1> Tu Carrito</h1>
+            <table id="tabla-carrito">
+            <thead>
+                <tr>
+                <th>Imagen</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Se llena dinámicamente -->
+            </tbody>
+            </table>
+
+            <p id="valor-final" class="total-carrito">El valor final a pagar es de: $0</p>
+
+            <div class="botones">
+            <button class="btn-limpiar-carrito"> Limpiar carrito</button>
+            <button class="btn-finalizar-compra" id="btn-finalizar-compra"> Finalizar Compra</button>
+            </div>
+    </main>
 </body>
 </html>
