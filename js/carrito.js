@@ -7,7 +7,19 @@
 document.getElementById("boton-admin").addEventListener("click", () => {
     window.location.href = "http://localhost:3000/dashboard"; // Cambiá por tu link
     });
+// =============================== Imprimir Datos del cliente =============================== //
+// ---- Obtengo el dato del nombre anteriormente guardado en el localStorage ---- //
+const nombre_usuario_final = localStorage.getItem("nombre_usuario");
 
+function imprimirDatosCliente(nombre){
+    // -----  // Insertando el nombre del cliente -----//
+    let divNombre = document.getElementById("nombre-cliente");
+    if(divNombre){
+        divNombre.innerHTML = `<p>¡Hola, ${nombre}!</p>`
+    };
+    
+};
+imprimirDatosCliente(nombre_usuario_final);
 // =============================== Obtener carrito del localStorage =============================== //
 function obtenerCarrito() {
     let carritoObtenido = localStorage.getItem("carrito");
