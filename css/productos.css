@@ -1,3 +1,6 @@
+/* ================================ */
+/* ==== Vista de la Productos  ====*/
+/* ================================*/
 :root {
     --color-base: #5285b8;
     --color-dark: #2c3e50;
@@ -9,7 +12,7 @@
 /* ====================================
     SECCIÓN PRODUCTOS
 ==================================== */
-/* Layout General */
+/* ---- Layout General ---- */
 .zona-principal {
     display: flex;
     flex-direction: row;
@@ -17,7 +20,7 @@
     min-height: 100vh;
 }
 
-/* Toggle lateral derecho */
+/* ---- Toggle lateral derecho ---- */
 .toggle-lateral {
     width: 220px;
     padding: 20px;
@@ -73,7 +76,7 @@
     display: none;
 }
 
-/* Slider se mueve */
+/* ---- Slider se mueve ---- */
 #categoria-toggle:checked + .switch .slider {
     top: 50%;
     background-color: var(--color-repuesto);
@@ -95,7 +98,7 @@
     color: var(--color-light);
 }
 
-/* Sección productos */
+/* ---- Sección productos ---- */
 
 .seccion-productos {
     flex: 1;
@@ -138,7 +141,7 @@
     background-color: var(--color-dark);
 }
 
-/* Cartas de productos */
+/* ---- Cartas de productos ---- */
 .contenedor-productos {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -218,7 +221,7 @@
     MEDIA QUERIES
 ================================ */
 
-/* Tablets y pantallas medias */
+/* ----  Pantallas medianas (768px) ---- */
 @media (max-width: 768px) {
     .zona-principal {
         flex-direction: column;
@@ -243,7 +246,7 @@
     }
 }
 
-/* Móviles y pantallas pequeñas */
+/* ----  Pantallas extra pequeñas (<576px) ---- */
 @media (max-width: 576px) {
     .header {
         flex-direction: column;

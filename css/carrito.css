@@ -1,3 +1,6 @@
+/* =========================== */
+/* ==== Vista del carrito ==== */
+/* =========================== */
 :root {
     --color-base: #5285b8;
     --color-dark: #2c3e50;
@@ -82,11 +85,11 @@ h1 {
     background-color: #000d4f;
 }
 
-/* =======================
-    RESPONSIVE - TABLET Y MÓVIL
-   ======================= */
+/* ======================= */
+/* ==== Media Queries ==== */
+/* ======================= */
 
-/* Estilos generales responsivos */
+/* ----  Pantallas medianas (768px) ---- */
 @media (max-width: 768px) {
 
     .header {
@@ -183,6 +186,8 @@ h1 {
         font-size: 1rem;
     }
 }
+
+/* ----  Pantallas extra pequeñas (<576px) ---- */
 
 @media (max-width: 480px) {
     .header-logo img {

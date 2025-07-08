@@ -1,3 +1,6 @@
+/* ================================ */
+/* ==== Vista de la bienvenida ====*/
+/* ================================*/
 body{
     background-color: #162c8f;
 }
@@ -46,7 +49,11 @@ h3{
     padding: 3px;
     cursor: pointer;
 }
-/* 1. Pantallas extra grandes (>=1200px) */
+/* ======================= */
+/* ==== Media Queries ==== */
+/* ======================= */
+
+/* ---- 1. Pantallas extra grandes (>=1200px) ---- */
 @media (min-width: 1200px) {
     img {
         width: 600px;
@@ -71,7 +78,7 @@ h3{
     }
 }
 
-/* 2. Pantallas medianas (768px–1199px) */
+/* ---- 2. Pantallas medianas (768px–1199px) ---- */
 @media (min-width: 768px) and (max-width: 1199px) {
     img {
         width: 500px;
@@ -96,7 +103,7 @@ h3{
     }
 }
 
-/* 3. Pantallas pequeñas (576px–767px) */
+/* 3. ---- Pantallas pequeñas (576px–767px) ---- */
 @media (min-width: 576px) and (max-width: 767px) {
     img {
         width: 70%;
@@ -121,7 +128,7 @@ h3{
     }
 }
 
-/* 4. Pantallas extra pequeñas (<576px) */
+/* ---- 4. Pantallas extra pequeñas (<576px) ---- */
 @media (max-width: 575px) {
     img {
         width: 90%;

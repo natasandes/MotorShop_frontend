@@ -1,4 +1,6 @@
-
+/* ===========================*/
+/* ==== DETALLES GLOBALES ====*/
+/* ===========================*/
 * {
     margin: 0;
     padding: 0;
@@ -21,8 +23,17 @@ html, body {
     color: var(--color-base);
 }
 
-/* ================================
-    HEADER
+/* ====================================*/
+/* ==== Fuente Principal de la app ==== */
+/* ==================================== */
+@font-face {
+    font-family: 'FuentePersonal';
+    src: url("../fonts/NotoSans_ExtraCondensed-SemiBoldItalic.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/* ==============================
+    ======== HEADER ============
 ================================ */
 .header {
     display: flex;
@@ -129,14 +140,11 @@ h1{
 
 
 
-@font-face {
-    font-family: 'FuentePersonal';
-    src: url("../fonts/NotoSans_ExtraCondensed-SemiBoldItalic.ttf") format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
+/* ======================= */
+/* ==== Media Queries ==== */
+/* ======================= */
 
-/* 1. Pantallas extra grandes (>=1200px) */
+/* ---- 1. Pantallas extra grandes (>=1200px) ---- */
 @media (min-width: 1200px) {
     .header {
         flex-direction: row;
@@ -169,7 +177,7 @@ h1{
     }
 }
 
-/* 2. Pantallas medianas (768px–1199px)  usamos and como en js*/
+/* ----  Pantallas medianas (768px) ---- */
 @media (min-width: 768px) and (max-width: 1199px) {
     .header {
         flex-wrap: wrap;
@@ -202,7 +210,7 @@ h1{
     }
 }
 
-/* 3. Pantallas pequeñas (576px–767px) */
+/* 3. ---- Pantallas pequeñas (576px–767px) ---- */
 @media (min-width: 576px) and (max-width: 767px) {
     .header {
         flex-direction: column;
@@ -239,7 +247,7 @@ h1{
     }
 }
 
-/* 4. Pantallas extra pequeñas (<576px) */
+/* ----  Pantallas extra pequeñas (<576px) ---- */
 @media (max-width: 575px) {
     .header {
         flex-direction: column;
@@ -259,7 +267,7 @@ h1{
     }
 
     .nav-cliente {
-        display: none; /* Podés reemplazarlo por un menú hamburguesa */
+        display: none; 
     }
 
     .boton-admin {

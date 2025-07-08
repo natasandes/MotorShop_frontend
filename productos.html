@@ -4,15 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> MotorShop </title>
-    
     <!--Favicon-->
     <link rel="icon" type="image/x-icon" href="./img/logo.png">
-    
     <!-- Estilos -->
     <link rel="stylesheet" href="css/globales.css">
     <link rel="stylesheet" href="css/productos.css">
-
-
+    <!-- Script -->
     <script defer src="js/productos.js"></script>
 
 </head>
@@ -26,7 +23,6 @@
             <img src="img/Logo.png" alt="Logo" class="logo">
             <h1> MotorShop | Productos </h1>
         </div>
-
         <!-- Centro: nombre del usuario + navegación -->
         <div class="header-central">
             <div class="nombre-cliente" id="nombre-cliente">¡Hola, Dylan!</div>
@@ -35,7 +31,6 @@
                 <a href="carrito.html">Carrito</a>
             </nav>
         </div>
-
         <!-- Botón admin a la derecha -->
         <div class="header-admin">
             <button class="boton-admin" id="boton-admin">Admin</button>
@@ -47,9 +42,7 @@
         CONTENIDO PRINCIPAL
     ===================================== -->
     <main>
-
         <section class="zona-principal">
-
             <!-- Toggle lateral -->
             <aside class="toggle-lateral">
                 <input type="checkbox" id="categoria-toggle">
@@ -59,23 +52,18 @@
                     <span class="slider"></span>
                 </label>
             </aside>
-
             <!-- Sección productos -->
             <section class="seccion-productos">
                 <h2 class="titulo-productos">Nuestros Productos</h2>
-
                 <div class="botones-ordenamiento">
                     <button id="ordenar-nombre">Ordenar por Nombre </button>
                     <button id="ordenar-precio">Ordenar por Precio </button>
                 </div>
-
                 <div class="contenedor-productos" id="contenedor-productos">
                     <!-- El contenido se carga mediante el archivo productos.js -->
                 </div>
             </section>
-
         </section>
-
     </main>
 </body>
 </html>
