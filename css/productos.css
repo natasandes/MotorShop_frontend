@@ -23,11 +23,10 @@
 /* ---- Toggle lateral derecho ---- */
 .toggle-lateral {
     width: 220px;
-    padding: 20px;
+    padding-top: 250px;
     background-color: var(--color-light);
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .switch {
@@ -200,19 +199,42 @@
 
 .tarjeta-producto button {
     background-color: var(--color-secundario);
-    color: white;
-    border: none;
+    color: rgb(0, 0, 0);
+    border: solid black 2px;
     padding: 8px 12px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     font-family: 'FuentePersonal', sans-serif;
+    margin-bottom: 7px;
+
 }
 
-.tarjeta-producto .cantidad{
+.tarjeta-producto button:hover{
+    color: white;
+    border: solid white 2px;
+
+} 
+
+.tarjeta-producto #boton-sumar{
+    background-color: darkgreen;
+}
+
+.tarjeta-producto #boton-sumar:hover{
+    background-color: rgb(6, 65, 6);
+}
+
+.tarjeta-producto #boton-restar{
+    background-color: rgb(184, 9, 9);
+}
+
+.tarjeta-producto #boton-restar:hover{
+    background-color: rgb(114, 2, 2);
+}
+
+.tarjeta-producto .estado{
     color: #00177c;
 }
-
 .tarjeta-producto button:hover {
     background-color: var(--color-dark);
 }

@@ -55,10 +55,10 @@ function imprimirProductos(array){
             <p class="descripcion" >${producto.descripcion}</p>
             <p class="precio">$${producto.precio}</p>
             <div class = "cantidad_producto">
-                <button class="btn-sumar-a-carrito" id="boton-sumar"> + </button>
-                <p class= "cantidad"><strong> ${producto.activo  ? "Disponible" : "No Disponible"} </strong></p>
-                <button class="btn-restar-a-carrito" id="boton-restar"> - </button>
+                <button class="btn-sumar-a-carrito" id="boton-sumar"><strong> + </strong></button>
+                <button class="btn-restar-a-carrito" id="boton-restar"><strong> - </strong></button>
             </div>
+            <p class= "estado"><strong> ${producto.activo  ? "Disponible" : "No Disponible"} </strong></p>
         </div>
         `;
     });
@@ -148,7 +148,7 @@ function guardarCarrito(carrito)
     localStorage.setItem("carrito",carritoTransformadoString);
 }
 
-function sumarAlCarrito(e) 
+function sumarAlCarrito(e, array) 
 {
     //--- Obtengo la referencia al elemento clickeado desde en base al evento (Propiedad exclusivamente de todos los Events) ---//
     let elementoClickeado = e.target;
@@ -159,10 +159,13 @@ function sumarAlCarrito(e)
     let elementoPrecio = itemContenedor.parentNode.querySelector(".precio").textContent;
     let elementoDescripcion = itemContenedor.parentNode.querySelector(".descripcion").textContent;
     let elementoImagen = itemContenedor.parentNode.querySelector(".imagen");
+    let elementoCantidad = itemContenedor.parentNode.querySelector(".cantidad");
+
     // ---- Carrito desde LocalStorage ---- //
     let carritoParseado = obtenerCarrito()|| [];
     // ---- Verificacion de producto si existe ---- //
     let productoExistente = carritoParseado.find(producto => producto.nombre === elementoNombre);
+
     if(productoExistente){
         productoExistente.cantidad+=1;
     }
@@ -176,7 +179,10 @@ function sumarAlCarrito(e)
             "imagen": elementoImagen ? elementoImagen.src : ""
         });        
     }
+
+
     alert(`Se agrego ${elementoNombre}`);
+
     guardarCarrito(carritoParseado);
     
 };
