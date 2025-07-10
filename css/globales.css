@@ -118,10 +118,13 @@ h1{
 
 .header-admin {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    gap: 40px;
 }
 
-.boton-admin {
+.boton {
     background-color: var(--color-light);
     color: var(--color-base);
     border: none;
@@ -133,7 +136,7 @@ h1{
     transition: background-color 300ms ease;
 }
 
-.boton-admin:hover {
+.boton:hover {
     background-color: var(--color-dark);
     color: var(--color-light);
 }

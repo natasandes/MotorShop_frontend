@@ -227,6 +227,11 @@ function asignarEventosBotones() {
 }
 
 
+// --- Cambio de modo claro/oscuro --- //
+function modoOscuro(){
+    
+}
+
 // =============================== Inicializar funciones ===============================
 function init(){
     imprimirProductos(ListaProductos);
