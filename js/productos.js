@@ -32,7 +32,7 @@ function imprimirDatosCliente(nombre){
 };
 // =============================== Redirección de boton admin =============================== //
 document.getElementById("boton-admin").addEventListener("click", () => {
-    window.location.href = "http://localhost:3000/dashboard";
+    window.location.href = "http://localhost:3000/dashboard/login";
     });
 
 
