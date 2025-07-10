@@ -5,11 +5,21 @@
 // ==== ==== //
 // =============================== Redirección de boton admin =============================== //
 document.getElementById("boton-admin").addEventListener("click", () => {
-    window.location.href = "http://localhost:3000/dashboard"; // Cambiá por tu link
+    window.location.href = "http://localhost:3000/dashboard/login"; // Cambiá por tu link
     });
 // =============================== Imprimir Datos del cliente =============================== //
 // ---- Obtengo el dato del nombre anteriormente guardado en el localStorage ---- //
 const nombre_usuario_final = localStorage.getItem("nombre_usuario");
+
+// --- Cambio de modo claro/oscuro --- //
+function modoOscuro(){
+    document.getElementById("boton-modo_oscuro").addEventListener("click", () =>{
+        document.body.classList.toggle("dark-mode");
+    })
+}
+
+modoOscuro();
+
 
 function imprimirDatosCliente(nombre){
     // -----  // Insertando el nombre del cliente -----//

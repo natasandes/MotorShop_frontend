@@ -239,6 +239,43 @@
     background-color: var(--color-dark);
 }
 
+/*-- Comportamiento con el modo oscuro activado --*/
+.dark-mode #boton-modo_oscuro{
+    color: white;
+    background-color: #2c3e50;
+    border: solid white 1px;
+}
+
+.dark-mode #boton-modo_oscuro:hover{
+    color: #5285b8;
+    background-color: white;
+    border: solid white 1px;
+}
+
+.dark-mode .toggle-lateral,
+.dark-mode .seccion-productos {
+    background-color: rgb(43, 43, 43);
+}
+
+.dark-mode .titulo-productos{
+    color: #5285b8;
+}
+
+.dark-mode .botones-ordenamiento button {
+    color: rgb(0, 0, 0);
+    background-color: #5285b8;
+}
+
+.dark-mode .tarjeta-producto{
+    background-color: #000000;
+    border: solid white 2px;
+}
+
+.dark-mode .tarjeta-producto h3{
+    color: #5285b8;
+}
+
+
 /* ================================
     MEDIA QUERIES
 ================================ */
