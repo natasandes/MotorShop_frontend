@@ -227,11 +227,19 @@ function asignarEventosBotones() {
 }
 
 
+// --- Cambio de modo claro/oscuro --- //
+function modoOscuro(){
+    document.getElementById("boton-modo_oscuro").addEventListener("click", () =>{
+        document.body.classList.toggle("dark-mode");
+    })
+}
+
 // =============================== Inicializar funciones ===============================
 function init(){
     imprimirProductos(ListaProductos);
     imprimirDatosCliente(nombre_usuario_final);
-    imprimirPorCategoria(ListaProductos)
+    imprimirPorCategoria(ListaProductos);
+    modoOscuro()
 
 };
 

@@ -5,11 +5,20 @@
 // ==== ==== //
 // =============================== Redirección de boton admin =============================== //
 document.getElementById("boton-admin").addEventListener("click", () => {
-    window.location.href = "http://localhost:3000/dashboard"; // Cambiá por tu link
+    window.location.href = "http://localhost:3000/dashboard/login"; // Cambiá por tu link
     });
 // =============================== Imprimir Datos del cliente =============================== //
 // ---- Obtengo el dato del nombre anteriormente guardado en el localStorage ---- //
 const nombre_usuario_final = localStorage.getItem("nombre_usuario");
+
+// --- Cambio de modo claro/oscuro --- //
+function modoOscuro(){
+    document.getElementById("boton-modo_oscuro").addEventListener("click", () =>{
+        document.body.classList.toggle("dark-mode");
+    })
+}
+
+
 
 function imprimirDatosCliente(nombre){
     // -----  // Insertando el nombre del cliente -----//
@@ -32,7 +41,7 @@ function cargarProductosCarrito() {
     let referenciaTable = document.getElementById("tabla-carrito").querySelector("tbody");
         
     let AcumuladorPrecioTotal = 0;
-
+    
     if (carritoParseado && carritoParseado.length > 0) {
         for (const elemento of carritoParseado) {
         // ---- Por cada elemento creo una nueva fila ---- //
@@ -52,11 +61,11 @@ function cargarProductosCarrito() {
         // ---- Descripción ---- //
         let celdaDescripcion = document.createElement("td");
         celdaDescripcion.innerText = elemento.descripcion || "Sin descripción";
-
+        
         // ---- Precio ---- //
         let celdaPrecio = document.createElement("td");
         celdaPrecio.innerText = elemento.precio;
-
+        
         // ---- Cantidad ---- //
         let celdaCantidad = document.createElement("td");
         celdaCantidad.innerText = elemento.cantidad;
@@ -67,18 +76,18 @@ function cargarProductosCarrito() {
         nuevaFila.appendChild(celdaDescripcion);
         nuevaFila.appendChild(celdaPrecio);
         nuevaFila.appendChild(celdaCantidad);
-
+        
         referenciaTable.appendChild(nuevaFila);
         // ---- Quita el signo $ del precio, lo convierte a número y suma al total según la cantidad ---- //
         let precioLimpio = parseFloat((elemento.precio || "0").replace("$", ""));
         AcumuladorPrecioTotal += precioLimpio * elemento.cantidad;
-        };
-        // ---- formatea un número decimal y limitarlo a dos cifras después del punto ---- //
-        let textoValorFinal = document.getElementById("valor-final");
-        textoValorFinal.innerText = `El valor final a pagar es de: $${AcumuladorPrecioTotal.toFixed(2)}`; 
-    } else {
-        alert("No cargaste productos en el carrito.");
     };
+    // ---- formatea un número decimal y limitarlo a dos cifras después del punto ---- //
+    let textoValorFinal = document.getElementById("valor-final");
+    textoValorFinal.innerText = `El valor final a pagar es de: $${AcumuladorPrecioTotal.toFixed(2)}`; 
+} else {
+    alert("No cargaste productos en el carrito.");
+};
 };
 // =============================== Limpiar Carrito =============================== //
 function limpiarCarrito() {
@@ -99,7 +108,7 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 // =============================== Generacion del PDF de compra (ticket) =============================== //
-async function generarPDFCompra() {
+async function generarPDFCompra() { 
     // ---- Carrito obetenido del local ---- //
     const carrito = obtenerCarrito();
     if (!carrito || carrito.length === 0) {
@@ -141,3 +150,5 @@ async function generarPDFCompra() {
 }
 // ---- Boton que da el evento generar PDF al ser apretado ---- //
 document.getElementById("btn-finalizar-compra").addEventListener("click", generarPDFCompra);
+
+modoOscuro();
