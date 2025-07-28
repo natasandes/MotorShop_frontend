@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> MotorShop | Carrito</title>
+    <title> MotorShop | Finalizar Compra</title>
     <!--Favicon-->
     <link rel="icon" type="image/x-icon" href="./img/logo.png">
     <!-- Estilos -->
@@ -36,8 +36,9 @@
             <button class="boton-admin" id="boton-admin">Admin</button>
         </div>
     </header>
+
     <main class="contenedor-carrito">
-        <h1> Tu Carrito</h1>
+        <h1> Detalles de la compra</h1>
             <table id="tabla-carrito">
             <thead>
                 <tr>
@@ -54,9 +55,7 @@
             </table>
             <p id="valor-final" class="total-carrito">El valor final a pagar es de: $0</p>
             <div class="botones">
-                <button class="btn-limpiar-carrito"> Limpiar carrito</button>
-                <button class="btn-finalizar-compra"  onclick="location.href='finalizar_compra.html'"> Finalizar Compra</button>
+                <button class="btn-finalizar-compra" id="btn-finalizar-compra" onclick="location.href='finalizar_compra.html'"> Confirmar Compra</button>
             </div>
     </main>
 </body>
-</html>
